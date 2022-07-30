@@ -7,7 +7,7 @@ function Spaceships() {
   const [value, setValue] = useState("");
   async function handleSubmit(e) {
     e.preventDefault();
-    fetch("spaceships")
+    fetch("https://backend-testsofka-production.up.railway.app/spaceships")
       .then((response) => response.json())
       .then((data) => {
         const dataFiltered = data.filter((s) => {
@@ -22,7 +22,7 @@ function Spaceships() {
   }
 
   useEffect(() => {
-    fetch("spaceships")
+    fetch("https://backend-testsofka-production.up.railway.app/spaceships")
       .then((response) => response.json())
       .then((data) => setSpaceships(data));
   }, []);

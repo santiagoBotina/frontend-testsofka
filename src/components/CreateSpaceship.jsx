@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "https://backend-testsofka-production.up.railway.app",
 });
 
 function CreateSpaceship() {
